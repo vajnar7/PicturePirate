@@ -53,6 +53,7 @@ class FirstFragment : Fragment() {
             takePicture { bitmap ->
                 bitmap?.let {
                     binding.imageViewPicture.setImageBitmap(it)
+                    Pirate.processImageForText(it, binding)
                 }
             }
         }
